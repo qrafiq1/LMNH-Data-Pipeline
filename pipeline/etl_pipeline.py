@@ -30,7 +30,7 @@ def load_csv(filepath: str) -> list[dict]:
 def get_connection():
     """Connects to the database"""
     logging.info("Connecting to the database")
-    load_dotenv(".env.prod")
+    load_dotenv(".env")
     try:
         conn = psycopg2.connect(
             database=environ["DATABASE_NAME"],
